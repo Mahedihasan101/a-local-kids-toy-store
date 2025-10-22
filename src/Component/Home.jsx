@@ -24,7 +24,7 @@ const Home = () => {
             <Links></Links>
             
 
-            {/* <Marquee>
+            <Marquee>
                 <div className="card bg-base-100 w-96 shadow-sm ml-4">
                     <figure>
                         <img
@@ -95,7 +95,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </Marquee> */}
+            </Marquee>
         </div>
     );
 };

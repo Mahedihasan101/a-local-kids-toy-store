@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router/dom";
 import Root from './Pages/Root.jsx';
 import Home from './Component/Home.jsx';
 import Allitems from './Component/Allitems.jsx';
+import Educational from './Component/Educational.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       path:'/all items',
       loader:()=>fetch('../public/Toydata.json'),
       Component:Allitems
+    },
+    {
+      path:"/educational",
+      Component:Educational,
     }
    ]
   },
