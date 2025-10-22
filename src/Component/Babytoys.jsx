@@ -1,21 +1,22 @@
 import React from 'react';
 import AnotherHome from './AnotherHome';
-import Links from '../Pages/Links';
 import Advantage from './Advantage';
+import Links from '../Pages/Links';
 import { useLoaderData } from 'react-router';
 
-const Allitems = () => {
+const Babytoys = () => {
     const toys = useLoaderData();
-    console.log(toys)
+    const educationalToys = toys.filter(toy => toy.subCategory === "Baby Toys");
+    const toy = educationalToys;
+    console.log(toy)
     return (
         <div className='max-w-11/12 mx-auto'>
             <AnotherHome></AnotherHome>
             <Advantage></Advantage>
-
             <Links></Links>
-            <div className='grid grid-cols-4 gap-2 bg-[#e6eef9]'>
+            <div className='grid grid-cols-4 bg-[#e5edf8]'>
                 {
-                    toys.map(toy => <div className="card bg-base-100 w-96 shadow-xl m-4 ">
+                    toy.map(toy => <div className="card bg-base-100 w-96 shadow-xl m-4 ">
                         <figure className='bg-gray-100'>
                             <img
                                 src={toy.pictureURL}
@@ -41,4 +42,4 @@ const Allitems = () => {
     );
 };
 
-export default Allitems;
+export default Babytoys;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import img from '../assets/ChatGPT Image Oct 22, 2025, 06_01_41 AM.png'
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-primary">Login</a>
+                <Link to="/login"><a className="btn btn-primary">Login</a></Link>
             </div>
         </div>
     );

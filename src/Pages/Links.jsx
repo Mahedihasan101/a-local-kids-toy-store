@@ -5,8 +5,8 @@ const Links = () => {
     const links = <>
         <NavLink to="/all items"><li className='m-2 '>All items</li></NavLink>
         <NavLink to="/educational"><li className='m-3 '>Educational</li></NavLink>
-        <NavLink><li className='m-3 '>Baby Toys</li></NavLink>
-        <NavLink><li className='m-3 '>Playsets</li></NavLink>
+        <NavLink to="/babytoys"><li className='m-3 '>Baby Toys</li></NavLink>
+        <NavLink to="/playsets"><li className='m-3 '>Playsets</li></NavLink>
     </>
     return (
         <div>

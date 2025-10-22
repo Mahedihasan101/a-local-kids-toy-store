@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './Home';
 
 const Catagorys = () => {
+    
     return (
         <div>
 
