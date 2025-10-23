@@ -19,6 +19,7 @@ const Register = () => {
             const user = result.user;
             // console.log(user)
             setUser(user);
+            e.target.reset();
 
         })
         .catch((error) =>{
@@ -46,6 +47,7 @@ const Register = () => {
                             <label className="label">Password</label>
                             <input name="password" type="password" className="input" placeholder="Password" />
                             <div><a className="link link-hover">Forgot password?</a></div>
+                            
                             <button type="submit" className="btn btn-neutral mt-4">Register</button>
                             <p className='font-semibold text-center'>Allready Have An Account ? <Link className='text-red-600' to="/login">Login</Link></p>
                         </fieldset>

@@ -2,7 +2,7 @@ import React from 'react';
 import AnotherHome from './AnotherHome';
 import Advantage from './Advantage';
 import Links from '../Pages/Links';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const Babytoys = () => {
     const toys = useLoaderData();
@@ -32,7 +32,7 @@ const Babytoys = () => {
                                 </div>
                             </div>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">View More</button>
+                                 <Link to={`/viewDetails/${toy.toyId}`}><button className="btn btn-primary">View More</button></Link>
                             </div>
                         </div>
                     </div>)

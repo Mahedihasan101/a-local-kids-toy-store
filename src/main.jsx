@@ -13,6 +13,8 @@ import Playsets from './Component/Playsets.jsx';
 import Login from './Component/Login.jsx';
 import Register from './Component/Register.jsx';
 import AuthProvider from './Povider/AuthProvider.jsx';
+import ViewDetails from './Component/ViewDetails.jsx';
+import PrivateRoute from './Povider/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register
+      },
+      {
+        path: "/viewDetails/:id",
+        loader: () => fetch('../public/Toydata.json'),
+
+        element:<PrivateRoute>
+          <ViewDetails></ViewDetails>
+        </PrivateRoute>
       }
     ]
   },

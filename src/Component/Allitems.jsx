@@ -2,7 +2,7 @@ import React from 'react';
 import AnotherHome from './AnotherHome';
 import Links from '../Pages/Links';
 import Advantage from './Advantage';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const Allitems = () => {
     const toys = useLoaderData();
@@ -13,7 +13,7 @@ const Allitems = () => {
             <Advantage></Advantage>
 
             <Links></Links>
-            <div className='grid grid-cols-4 gap-2 bg-[#e6eef9]'>
+            <div className='grid grid-cols-4 gap-2 bg-[#fff7ed]'>
                 {
                     toys.map(toy => <div className="card bg-base-100 w-96 shadow-xl m-4 ">
                         <figure className='bg-gray-100'>
@@ -31,7 +31,7 @@ const Allitems = () => {
                                 </div>
                             </div>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">View More</button>
+                                <Link to={`/viewDetails/${toy.toyId}`}><button className="btn btn-primary">View More</button></Link>
                             </div>
                         </div>
                     </div>)
