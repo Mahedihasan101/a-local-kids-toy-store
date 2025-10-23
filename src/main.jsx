@@ -12,6 +12,7 @@ import Babytoys from './Component/Babytoys.jsx';
 import Playsets from './Component/Playsets.jsx';
 import Login from './Component/Login.jsx';
 import Register from './Component/Register.jsx';
+import AuthProvider from './Povider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,17 +40,17 @@ const router = createBrowserRouter([
         Component: Babytoys,
       },
       {
-        path:"/playsets",
+        path: "/playsets",
         loader: () => fetch('../public/Toydata.json'),
-        Component:Playsets
+        Component: Playsets
       },
       {
-        path:"/login",
-        Component:Login
+        path: "/login",
+        Component: Login
       },
       {
-        path:"/register",
-        Component:Register
+        path: "/register",
+        Component: Register
       }
     ]
   },
@@ -57,6 +58,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <AuthProvider>
+      <RouterProvider router={router} />,
+
+    </AuthProvider>
   </StrictMode>,
 )

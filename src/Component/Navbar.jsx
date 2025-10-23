@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import img from '../assets/ChatGPT Image Oct 22, 2025, 06_01_41 AM.png'
+import { AuthContext } from '../Povider/AuthProvider';
 
 const Navbar = () => {
+    const {user}=use(AuthContext)
 
     const links = <>
+    
         <NavLink to="/"><li className='m-2 text-[#636c76]'>Home</li></NavLink>
         <NavLink><li className='m-2 text-[#636c76]'>Contact</li></NavLink>
         <NavLink><li className='m-2 text-[#636c76]'>MY Profile</li></NavLink>
@@ -31,7 +34,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login"><a className="btn btn-primary">Login</a></Link>
+                {
+                    user ?<Link to="/login"><a className="btn btn-primary">Logout</a></Link>:<Link to="/login"><a className="btn btn-primary">Login</a></Link>
+                }
+                
             </div>
         </div>
     );
