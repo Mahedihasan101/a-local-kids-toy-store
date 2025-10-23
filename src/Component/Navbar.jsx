@@ -4,10 +4,19 @@ import img from '../assets/ChatGPT Image Oct 22, 2025, 06_01_41 AM.png'
 import { AuthContext } from '../Povider/AuthProvider';
 
 const Navbar = () => {
-    const {user}=use(AuthContext)
+    const { user, logOut } = use(AuthContext)
+    const handleLogOut = () => {
+        console.log("user trying to logout");
+        logOut()
+            .then(() => {
+                alert("You logged Out")
+            }).catch((error) => {
+                console.log(error)
+            });
+    }
 
     const links = <>
-    
+
         <NavLink to="/"><li className='m-2 text-[#636c76]'>Home</li></NavLink>
         <NavLink><li className='m-2 text-[#636c76]'>Contact</li></NavLink>
         <NavLink><li className='m-2 text-[#636c76]'>MY Profile</li></NavLink>
@@ -33,11 +42,23 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                {
-                    user ?<Link to="/login"><a className="btn btn-primary">Logout</a></Link>:<Link to="/login"><a className="btn btn-primary">Login</a></Link>
-                }
-                
+            <div className='navbar-end flex'>
+                <div>
+                    {user && (
+                        <img
+                            src={user.photoURL}
+                            alt="User"
+                            className="w-10 h-10 rounded-full mx-auto"
+                            
+                        />
+                    )}
+                </div>
+                <div>
+                    {
+                        user ? <button onClick={handleLogOut} className='btn btn-primary'>Logout</button> : <Link to="/login"><a className="btn btn-primary">Login</a></Link>
+                    }
+
+                </div>
             </div>
         </div>
     );
