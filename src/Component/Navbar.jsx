@@ -13,6 +13,7 @@ const Navbar = () => {
             }).catch((error) => {
                 console.log(error)
             });
+
     }
 
     const links = <>
@@ -43,16 +44,21 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='navbar-end flex'>
-                <div>
+                <div className="relative inline-block group">
                     {user && (
-                        <img
-                            src={user.photoURL}
-                            alt="User"
-                            className="w-10 h-10 rounded-full mx-auto"
-                            
-                        />
+                        <>
+                            <img
+                                src={user.photoURL || ""}
+                                alt="User"
+                                className="w-10 h-10 rounded-full border-0 "
+                            />
+                            <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                {user.displayName}
+                            </span>
+                        </>
                     )}
                 </div>
+
                 <div>
                     {
                         user ? <button onClick={handleLogOut} className='btn btn-primary'>Logout</button> : <Link to="/login"><a className="btn btn-primary">Login</a></Link>
