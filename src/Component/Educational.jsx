@@ -38,6 +38,9 @@ const Educational = () => {
                     </div>)
                 }
             </div>
+            <div className='bg-[#e5edf8] text-center pb-4'>
+                            <Link><button className='btn btn-primary text-center'>Back to Home</button></Link>
+                        </div>
 
         </div>
     );

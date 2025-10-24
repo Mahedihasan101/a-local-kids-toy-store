@@ -4,10 +4,15 @@ import Advantage from './Advantage';
 import Links from '../Pages/Links';
 import Allitems from './Allitems';
 import Marquee from 'react-fast-marquee';
+import { Link, useLoaderData } from 'react-router';
+import ShoopCatagory from './ShoopCatagory';
+
 
 
 const Home = () => {
-
+    const toys = useLoaderData();
+    const trending = toys.filter(toy => toy.subCategory === "Trending");
+    const toy = trending;
     return (
         <div className='max-w-11/12 mx-auto'>
             <div className='bg-[#f88e0f] flex flex-col md:flex-row justify-between items-center h-[610px] rounded-4xl mt-5'>
@@ -22,25 +27,36 @@ const Home = () => {
             </div>
             <Advantage></Advantage>
             <Links></Links>
-            
 
-            <Marquee>
-                <div className="card bg-base-100 w-96 shadow-sm ml-4">
-                    <figure>
-                        <img
-                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                            alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Card Title</h2>
-                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">View More</button>
+
+           <Marquee>
+             <div className='grid grid-cols-5 bg-amber-100'>
+                {
+                    toy.map(toy => <div className="card bg-base-100 w-96 shadow-xl m-4 ">
+                        <figure className='bg-gray-100'>
+                            <img
+                                src={toy.pictureURL}
+                                alt="Shoes" className='w-[385px] h-[385px] p-2' />
+                        </figure>
+                        <div className="p-5">
+                            <h2 className="card-title text-[#69778a]">{toy.subCategory}</h2>
+                            <div className='flex justify-between'>
+                                <p className='font-bold text-[18px]'>{toy.toyName}</p>
+                                <div>
+                                    <img src="" alt="" />
+                                    <h1 className='font-bold text-[18px]'>{toy.rating}</h1>
+                                </div>
+                            </div>
+                            <div className="card-actions justify-end">
+                                <Link to={`/viewDetails/${toy.toyId}`}><button className="btn btn-primary">View More</button></Link>
+                            </div>
                         </div>
-                    </div>
-                </div>
-              
-            </Marquee>
+                    </div>)
+                }
+            </div>
+           </Marquee>
+           <ShoopCatagory></ShoopCatagory>
+           
         </div>
     );
 };

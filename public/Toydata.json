@@ -238,5 +238,66 @@
     "description": "Doctor playset with stethoscope, thermometer, and pretend medicine tools.",
     "pictureURL": "https://i.pinimg.com/736x/34/b7/06/34b70646f64b8775c58fad3220252b51.jpg",
     "subCategory": "Playsets"
+  },
+    {
+    "toyId": 21,
+    "toyName": "Glow-in-the-Dark Race Track Set",
+    "sellerName": "FunSpeed Toys",
+    "sellerEmail": "contact@funspeed.com",
+    "price": 49.99,
+    "rating": 4.9,
+    "availableQuantity": 60,
+    "description": "Flexible glowing race track with fast cars and creative loop designs loved by kids.",
+    "pictureURL": "https://i.pinimg.com/736x/45/5b/87/455b87689dcbb159eaa1dfcaae3e6743.jpg",
+    "subCategory": "Trending"
+  },
+  {
+    "toyId": 22,
+    "toyName": "Interactive Talking Unicorn",
+    "sellerName": "Magic Buddies",
+    "sellerEmail": "info@magicbuddies.com",
+    "price": 59.99,
+    "rating": 4.8,
+    "availableQuantity": 50,
+    "description": "Soft plush unicorn that talks, sings, and responds to touch with lights and sounds.",
+    "pictureURL": "https://i.pinimg.com/1200x/9e/29/63/9e2963c9f2fd353562965749ab2a12d5.jpg",
+    "subCategory": "Trending"
+  },
+  {
+    "toyId": 23,
+    "toyName": "Mini Drone with LED Lights",
+    "sellerName": "SkyPlay",
+    "sellerEmail": "sales@skyplay.com",
+    "price": 69.99,
+    "rating": 4.7,
+    "availableQuantity": 40,
+    "description": "Compact drone with colorful LED lights and easy controls for kids and beginners.",
+    "pictureURL": "https://i.pinimg.com/1200x/47/09/54/470954f7d7889d196f862c0892bd20d5.jpg",
+    "subCategory": "Trending"
+  },
+  {
+    "toyId": 24,
+    "toyName": "Smart Coding Robot Pet",
+    "sellerName": "Tech Buddies",
+    "sellerEmail": "hello@techbuddies.com",
+    "price": 89.99,
+    "rating": 4.9,
+    "availableQuantity": 35,
+    "description": "Programmable robot pet that learns commands, reacts to voice, and dances with music.",
+    "pictureURL": "https://i.pinimg.com/1200x/0e/74/0b/0e740b418fc5209a379024040e61ca79.jpg",
+    "subCategory": "Trending"
+  },
+  {
+    "toyId": 25,
+    "toyName": "3D Hologram Galaxy Projector",
+    "sellerName": "DreamLight Co.",
+    "sellerEmail": "support@dreamlight.com",
+    "price": 54.99,
+    "rating": 4.8,
+    "availableQuantity": 45,
+    "description": "Projects a rotating galaxy of stars and nebula lights that kids and adults love.",
+    "pictureURL": "https://i.pinimg.com/1200x/4a/0d/6f/4a0d6f2028c875fb9acc84aac6cbc44c.jpg",
+    "subCategory": "Trending"
   }
+
 ]

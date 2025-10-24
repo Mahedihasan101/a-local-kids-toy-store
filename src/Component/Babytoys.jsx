@@ -32,12 +32,16 @@ const Babytoys = () => {
                                 </div>
                             </div>
                             <div className="card-actions justify-end">
-                                 <Link to={`/viewDetails/${toy.toyId}`}><button className="btn btn-primary">View More</button></Link>
+                                <Link to={`/viewDetails/${toy.toyId}`}><button className="btn btn-primary">View More</button></Link>
                             </div>
                         </div>
                     </div>)
                 }
             </div>
+            <div className='bg-[#e5edf8] text-center pb-4'>
+                <Link><button className='btn btn-primary text-center'>Back to Home</button></Link>
+            </div>
+
         </div>
     );
 };

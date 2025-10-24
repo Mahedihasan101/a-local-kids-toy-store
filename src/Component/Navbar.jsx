@@ -20,7 +20,9 @@ const Navbar = () => {
 
         <NavLink to="/"><li className='m-2 text-[#636c76]'>Home</li></NavLink>
         <NavLink><li className='m-2 text-[#636c76]'>Contact</li></NavLink>
-        <NavLink><li className='m-2 text-[#636c76]'>MY Profile</li></NavLink>
+        {
+            user?<NavLink to="/profile"><li className='m-2 text-[#636c76]'>MY Profile</li></NavLink>:""
+        }
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm px-8">
