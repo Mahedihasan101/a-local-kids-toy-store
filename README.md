@@ -1,16 +1,44 @@
-# React + Vite
+# 🧸 A Local Kids Toy Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and colorful web application for a local kids’ toy shop — showcasing toys, categories, and fun offers to make shopping an enjoyable experience for kids and parents alike.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Purpose
 
-## React Compiler
+The goal of this project is to create an engaging and user-friendly online platform for a local toy store.  
+It allows users to browse toys by category, view product details, and explore featured deals — all in a playful and responsive interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🔗 Live URL
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👉 [Visit Live Site](https://[your-live-link-here.com](https://cerulean-gnome-05dfff.netlify.app/)
+
+---
+
+## ✨ Key Features
+
+- 🧩 **Toy Catalog:** Displays toys by All Items, Educational,Play sets and Baby toys.  
+- 🧒 **Responsive Design:** Works perfectly on mobile, tablet, and desktop.  
+- 🎨 **Modern UI:** Built with Tailwind CSS for a colorful and kid-friendly look.  
+- 🔄 **Dynamic Data:** Fetches toys and categories from API or JSON data.  
+- 💫 **Smooth Swiper slider:** Interactive transitions using Swiper slider.  
+s.  
+
+---
+
+## 🧠 Tech Stack
+
+**Frontend:** React + Vite  
+**Styling:** Tailwind CSS + daisyui  
+**Routing:** React Router DOM  
+**Icons:** Lucide React  
+ 
+
+---
+
+## 📦 NPM Packages Used
+
+```bash
+npm install react react-dom react-router-dom tailwindcss  framer-motion lucide-react @radix-ui/react-icons
