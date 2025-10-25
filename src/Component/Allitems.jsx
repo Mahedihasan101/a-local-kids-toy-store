@@ -3,12 +3,17 @@ import AnotherHome from './AnotherHome';
 import Links from '../Pages/Links';
 import Advantage from './Advantage';
 import { Link, useLoaderData } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 const Allitems = () => {
     const toys = useLoaderData();
     console.log(toys)
     return (
-        <div className='max-w-11/12 mx-auto'>
+        <div>
+            <Helmet>
+                <title>All Items | Toy Store</title>
+            </Helmet>
+            <div className='max-w-11/12 mx-auto'>
             <AnotherHome></AnotherHome>
             <Advantage></Advantage>
 
@@ -40,6 +45,7 @@ const Allitems = () => {
             <div className='bg-[#e5edf8] text-center pb-4'>
                 <Link><button className='btn btn-primary text-center'>Back to Home</button></Link>
             </div>
+        </div>
         </div>
     );
 };

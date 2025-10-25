@@ -3,6 +3,7 @@ import AnotherHome from './AnotherHome';
 import Advantage from './Advantage';
 import Links from '../Pages/Links';
 import { useLoaderData } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 const Playsets = () => {
     const toys = useLoaderData();
@@ -11,7 +12,11 @@ const Playsets = () => {
     console.log(toy)
 
     return (
-        <div className='max-w-11/12 mx-auto'>
+      <div>
+        <Helmet>
+            <title>Play Sets | Toy Store</title>
+        </Helmet>
+          <div className='max-w-11/12 mx-auto'>
             <AnotherHome></AnotherHome>
             <Advantage></Advantage>
             <Links></Links>
@@ -41,6 +46,7 @@ const Playsets = () => {
             </div>
 
         </div>
+      </div>
     );
 };
 

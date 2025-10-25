@@ -3,6 +3,7 @@ import AnotherHome from './AnotherHome';
 import Advantage from './Advantage';
 import Links from '../Pages/Links';
 import { Link, useLoaderData } from 'react-router';
+import { Helmet } from 'react-helmet';
 
 const Educational = () => {
     const toys = useLoaderData();
@@ -10,7 +11,11 @@ const Educational = () => {
     const toy = educationalToys;
     console.log(toy)
     return (
-        <div className='max-w-11/12 mx-auto'>
+       <div>
+        <Helmet>
+            <title>Educational Toys | Toy Store</title>
+        </Helmet>
+         <div className='max-w-11/12 mx-auto'>
             <AnotherHome></AnotherHome>
             <Advantage></Advantage>
             <Links></Links>
@@ -43,6 +48,7 @@ const Educational = () => {
                         </div>
 
         </div>
+       </div>
     );
 };
 

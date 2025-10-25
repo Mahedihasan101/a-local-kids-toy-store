@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 const ShoopCatagory = () => {
     return (
-        <div className='bg-[#00bbae] py-12 rounded-2xl'>
+        <div className='bg-[#00bbae] py-50 rounded-2xl '>
             
             <h1 className='font-bold text-4xl text-center '>Shop by Categories</h1>
            <div className='grid grid-cols-3 gap-10 mt-10'>

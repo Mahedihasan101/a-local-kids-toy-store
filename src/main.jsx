@@ -16,6 +16,9 @@ import AuthProvider from './Povider/AuthProvider.jsx';
 import ViewDetails from './Component/ViewDetails.jsx';
 import PrivateRoute from './Povider/PrivateRoute.jsx';
 import Profile from './Component/Profile.jsx';
+import ForgetPassword from './Component/ForgetPassword.jsx';
+import Error from './Component/Error.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -66,9 +69,18 @@ const router = createBrowserRouter([
       {
         path:"/profile",
         Component:Profile
-      }
+      },
+      {
+        path:"/forgetPassword",
+        Component:ForgetPassword
+      },
+     
     ]
   },
+   {
+        path:"*",
+        Component:Error
+      }
 ]);
 
 createRoot(document.getElementById('root')).render(

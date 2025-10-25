@@ -1,28 +1,20 @@
 import { updateProfile } from 'firebase/auth';
 import  { use, useEffect, useState } from 'react';
 import { AuthContext } from '../Povider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Profile = () => {
-     const { user } = use(AuthContext)
+     const { user,loading } = use(AuthContext)
 
-  const [name, setName] = useState(user.displayName || "");
-  const [photoURL, setPhotoURL] = useState(user.photoURL || "");
+  const [name, setName] = useState(user?.displayName || "");
+  const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const [message, setMessage] = useState("");
    useEffect(() => {
     if (user) {
-      setName(user.displayName || "");
-      setPhotoURL(user.photoURL || "");
+      setName(user?.displayName || "");
+      setPhotoURL(user?.photoURL || "");
     }
   }, [user]);
-   if (!user) {
-    return (
-      <div className="text-center mt-20">
-        <h2 className="text-2xl font-semibold text-gray-800">
-          Please log in to view your profile.
-        </h2>
-      </div>
-    );
-  }
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -36,18 +28,32 @@ const Profile = () => {
       setMessage("Error updating profile: " + error.message);
     }
   };
+   if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-xl text-gray-600">Loading your profile...</p>
+      </div>
+    );
+  }
+
   
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
-      <h2 className='font-bold text-4xl'> MY Profile</h2>
+    
+   <div>
+    <Helmet>
+      <title>MY Profile</title>
+    </Helmet>
+     <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }} className='border-2 items-center flex flex-col'>
+      <h2 className='font-bold text-4xl text-center mb-5'> MY Profile</h2>
       <img
-        src={user.photoURL || "https://via.placeholder.com/150"}
+        src={user?.photoURL || "https://via.placeholder.com/150"}
         alt="Profile"
+        className='items-center'
         style={{ width: "150px", borderRadius: "50%" }}
       />
-      <p>Name: {user.displayName}</p>
-      <p>Email: {user.email}</p>
+      <p> {user?.displayName}</p>
+      <p> {user?.email}</p>
 
       <form onSubmit={handleSave} style={{ marginTop: "20px" }}>
         <div>
@@ -62,7 +68,7 @@ const Profile = () => {
         </div>
 
         <div className='mt-2'>
-          <label>Photo URL:</label>
+          <label>P. URL:</label>
           <input
           className="border-2 ml-2"
             type="text"
@@ -72,12 +78,13 @@ const Profile = () => {
           />
         </div>
 
-        <button className='btn btn-primary' type="submit" style={{ marginTop: "10px" }}>
+        <button className='btn btn-primary flex mx-auto' type="submit" style={{ marginTop: "10px" }}>
           Save Changes
         </button>
       </form>
       {message && <p>{message}</p>}
     </div>
+   </div>
   );
 };
 
