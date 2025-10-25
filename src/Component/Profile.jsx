@@ -2,6 +2,7 @@ import { updateProfile } from 'firebase/auth';
 import  { use, useEffect, useState } from 'react';
 import { AuthContext } from '../Povider/AuthProvider';
 import { Helmet } from 'react-helmet';
+import img2 from '../assets/7405149_3626052.jpg'
 
 const Profile = () => {
      const { user,loading } = use(AuthContext)
@@ -44,12 +45,13 @@ const Profile = () => {
     <Helmet>
       <title>MY Profile</title>
     </Helmet>
-     <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }} className='border-2 items-center flex flex-col'>
-      <h2 className='font-bold text-4xl text-center mb-5'> MY Profile</h2>
+    <div className=' md:p-40 'style={{ backgroundImage: `url(${img2})` }}>
+       <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }} className='border-2 items-center rounded-2xl flex flex-col bg-blue-300 '>
+      <h2 className='font-bold text-4xl text-center mb-5 '> MY Profile</h2>
       <img
         src={user?.photoURL || "https://via.placeholder.com/150"}
         alt="Profile"
-        className='items-center'
+        className='items-center border-2'
         style={{ width: "150px", borderRadius: "50%" }}
       />
       <p> {user?.displayName}</p>
@@ -83,6 +85,7 @@ const Profile = () => {
         </button>
       </form>
       {message && <p>{message}</p>}
+    </div>
     </div>
    </div>
   );

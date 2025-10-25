@@ -1,8 +1,10 @@
 import React from 'react';
+import footerimg from '../assets/6101729_3159229.jpg'
 
 const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10 max-w-11/12 mx-auto">
+        <div className='' style={{ backgroundImage: `url(${footerimg})` }}>
+            <footer className="footer sm:footer-horizontal max-w-11/12 mx-auto text-base-content p-10  ">
             <nav>
                 <h6 className="footer-title">Services</h6>
                 <a className="link link-hover">Service Offerings</a>
@@ -55,7 +57,8 @@ const Footer = () => {
                     </a>
                 </div>
             </nav>
-        </footer> );
+        </footer>
+        </div> );
 };
 
 export default Footer;

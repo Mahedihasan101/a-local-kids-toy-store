@@ -25,12 +25,12 @@ const ViewDetails = () => {
         setMan({ name, email });
     }
     return (
-        <div className='relative'>
-            <div className="hero bg-[#c48d4a] min-h-screen max-w-11/12 mx-auto pb-40">
+        <div className=''>
+            <div className="hero bg-[#c48d4a] md:min-h-screen max-w-11/12 mx-auto pb-40">
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={view.pictureURL}
-                        className="max-w-sm rounded-lg shadow-2xl"
+                        className="md:max-w-sm rounded-lg shadow-2xl"
                     />
                     <div className='ml-4'>
                         <div className='flex gap-2 items-center'>
@@ -47,7 +47,8 @@ const ViewDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute top-160 left-180'>
+
+            <div className='ml-0 md:ml-60'>
                 <form onSubmit={submitButton}>
                     <div className="  ">
                         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -59,9 +60,9 @@ const ViewDetails = () => {
                                     <fieldset className="fieldset">
 
                                         <label className="label">Name</label>
-                                        <input name="name" type="name" className="input" placeholder="Name" />
+                                        <input name="name" type="name" className="input" placeholder="Name" required />
                                         <label className="label">Email</label>
-                                        <input name="email" type="email" className="input" placeholder="Email" />
+                                        <input name="email" type="email" className="input" placeholder="Email"  required/>
                                         {man && <p className='text-green-200'>"submission successfully"</p>}
 
 

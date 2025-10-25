@@ -7,7 +7,7 @@ import img4 from '../assets/Screenshot 2025-10-22 073259.png'
 const Advantage = () => {
     return (
         <div>
-            <div className='grid grid-cols-4 gap-7'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7'>
                 
                 <div className='flex items-center gap-4 bg-[#fff7ed] py-8 px-10 mt-10 rounded-2xl'>
                     <img src={ moneyimg} alt="" className='w-[40px] h-[36px] rounded-[50px]' />

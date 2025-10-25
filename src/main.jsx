@@ -18,6 +18,7 @@ import PrivateRoute from './Povider/PrivateRoute.jsx';
 import Profile from './Component/Profile.jsx';
 import ForgetPassword from './Component/ForgetPassword.jsx';
 import Error from './Component/Error.jsx';
+import ContactUs from './Component/ContactUs.jsx';
 
 
 const router = createBrowserRouter([
@@ -27,27 +28,27 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch('../public/Toydata.json'),
+        loader: () => fetch('/Toydata.json'),
         Component: Home,
       },
       {
         path: '/all items',
-        loader: () => fetch('../public/Toydata.json'),
+        loader: () => fetch('/Toydata.json'),
         Component: Allitems
       },
       {
         path: "/educational",
-        loader: () => fetch('../public/Toydata.json'),
+        loader: () => fetch('/Toydata.json'),
         Component: Educational,
       },
       {
         path: "/babytoys",
-        loader: () => fetch('../public/Toydata.json'),
+        loader: () => fetch('/Toydata.json'),
         Component: Babytoys,
       },
       {
         path: "/playsets",
-        loader: () => fetch('../public/Toydata.json'),
+        loader: () => fetch('/Toydata.json'),
         Component: Playsets
       },
       {
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/viewDetails/:id",
-        loader: () => fetch('../public/Toydata.json'),
+        loader: () => fetch('/Toydata.json'),
 
         element:<PrivateRoute>
           <ViewDetails></ViewDetails>
@@ -70,16 +71,21 @@ const router = createBrowserRouter([
         path:"/profile",
         Component:Profile
       },
+       {
+        Path:"/contact",
+        element:<ContactUs></ContactUs>
+      },
       {
         path:"/forgetPassword",
         Component:ForgetPassword
       },
      
+     
     ]
   },
    {
         path:"*",
-        Component:Error
+        element:<Error></Error>
       }
 ]);
 

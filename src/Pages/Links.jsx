@@ -10,7 +10,7 @@ const Links = () => {
     </>
     return (
         <div>
-           <div className='flex justify-between mt-10'>
+           <div className='flex flex-col md:flex-row justify-between mt-10'>
             <h1 className='font-bold text-[36px]'>Trending Toy</h1>
             <ul>
                 <li className='flex items-center font-medium text-[18px] bg-[#f88e0f] 

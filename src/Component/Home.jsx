@@ -123,7 +123,10 @@ const Home = () => {
 
 
                     <ShoopCatagory></ShoopCatagory>
-                    <div className='bg-[#c28233]'>
+                   
+                </div>
+            </div>
+             <div className='bg-[#c28233]'>
                         <Marquee>
                             <p className='py-8 font-semibold text-2xl ml-15'>First your free trial and enjoy 1 months of toyup for $2/month on select plans.
                             </p>
@@ -133,8 +136,6 @@ const Home = () => {
                             </p>
                         </Marquee>
                     </div>
-                </div>
-            </div>
 
         </div>
     );

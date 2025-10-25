@@ -19,9 +19,9 @@ const Educational = () => {
             <AnotherHome></AnotherHome>
             <Advantage></Advantage>
             <Links></Links>
-            <div className='grid grid-cols-4 bg-[#fff7ed]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-[#fff7ed]'>
                 {
-                    toy.map(toy => <div className="card bg-base-100 w-96 shadow-xl m-4 ">
+                    toy.map(toy => <div className="card bg-base-100 md:w-96 shadow-xl m-4 ">
                         <figure className='bg-gray-100'>
                             <img
                                 src={toy.pictureURL}
@@ -36,7 +36,8 @@ const Educational = () => {
                                     <h1 className='font-bold text-[18px]'>{toy.rating}</h1>
                                 </div>
                             </div>
-                            <div className="card-actions justify-end">
+                            <div className="card-actions flex justify-between">
+                                <p className='font-bold text-2xl'>${toy.price}</p>
                                  <Link to={`/viewDetails/${toy.toyId}`}><button className="btn btn-primary">View More</button></Link>
                             </div>
                         </div>
