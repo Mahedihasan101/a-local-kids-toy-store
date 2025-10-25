@@ -19,7 +19,7 @@ const Babytoys = () => {
             <AnotherHome></AnotherHome>
             <Advantage></Advantage>
             <Links></Links>
-            <div className='grid grid-cols-4 bg-[#e5edf8]'>
+            <div className='grid grid-cols-4 bg-[#fff7ed]'>
                 {
                     toy.map(toy => <div className="card bg-base-100 w-96 shadow-xl m-4 ">
                         <figure className='bg-gray-100'>
@@ -42,9 +42,6 @@ const Babytoys = () => {
                         </div>
                     </div>)
                 }
-            </div>
-            <div className='bg-[#e5edf8] text-center pb-4'>
-                <Link><button className='btn btn-primary text-center'>Back to Home</button></Link>
             </div>
 
         </div>
